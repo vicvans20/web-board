@@ -1,8 +1,6 @@
 $(document).ready(function(){
-	console.log("cargue")
 	$("#sum-form").submit(function(ev){
 		ev.preventDefault();
-		console.log("form");
 		$.ajax({
 			url: "/sum",
 			type: 'POST',
@@ -10,7 +8,12 @@ $(document).ready(function(){
 			// data: $(ev.target).serialize(),
 			success: function(data){
 				if(data.success){
-					$("#sum-result")[0].value = data.result
+					$("#sum-result").focus();
+					$("#sum-result")[0].value = data.result;
+					setInterval(function(){
+						$("#sum-result").blur();
+					},350)
+					
 				}
 				else{
 					alert("Something went wrong.");

@@ -24,6 +24,21 @@ post '/sum' do
   { result: result, success: status }.to_json
 end
 
+get '/kiloverter' do
+	erb :application, layout: false do
+		erb :kiloverter
+	end
+end
+
+post '/convert' do
+	puts params
+	val = params[:watsValue].to_f
+	op = params[:type]
+	result = (op == "w" ? val*1000 : val*1.3410220888)
+	content_type :json
+	{ result: result, success: true }.to_json
+end
+
 get '/paths/:id' do
 	erb :application, layout: false do
 		erb :path_layout do

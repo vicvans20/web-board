@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="text-center">Kiloverter</h2>
+		</div>
+	</div>
+		<form id="kiloverter-form" class="form-inline" method="post">
+			<div class="row">
+
+				<div class="col-md-offset-4 col-md-2">
+					<div class="form-group full-w">
+						<input style="width:100%;" type="number" name="watsValue" class="form-control full-w" placeholder="Kilowats Value"> 
+					</div>
+				</div>
+				
+				<div class="col-md-2">
+					<div class="form-group full-w">
+						<label style="margin-right:10px;">To</label>
+						<select  name="type"class="form-control">
+							<option value="w">Wats</option>
+						  <option value="hp">Horse Power</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="form-group">
+						<button class="btn btn-default">Convert</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div style="margin-top:10px;" class="row">
+			<div class="col-md-offset-5 col-md-2">
+				<input id="kresult" type="number" class="form-control text-center" readonly>
+			</div>
+		</div>
+</div>

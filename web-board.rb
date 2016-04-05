@@ -4,13 +4,18 @@ require 'json'
 
 @@key = false
 
+# -----------------------------------
+# Index
 get '/' do
 	erb :application, :layout => false do
 		@@key = false
 		erb :index
 	end
 end
+# -----------------------------------
 
+# -----------------------------------
+# Sum between two numbers
 get '/simple_sum' do
 	erb :application, :layout => false do
 		erb :sum
@@ -23,7 +28,10 @@ post '/sum' do
 	content_type :json
   { result: result, success: status }.to_json
 end
+# -----------------------------------
 
+# -----------------------------------
+# Kiloconverter
 get '/kiloverter' do
 	erb :application, layout: false do
 		erb :kiloverter
@@ -38,7 +46,19 @@ post '/convert' do
 	content_type :json
 	{ result: result, success: true }.to_json
 end
+# -----------------------------------
 
+# -----------------------------------
+# Demo for geocomplete
+get '/geocomplete_demo' do
+  erb :application, :layout => false do
+		erb :geocomplete_demo
+	end
+end
+# -----------------------------------
+
+# -----------------------------------
+# Flow control with conditionals on a simple laberynth like view
 get '/paths/:id' do
 	erb :application, layout: false do
 		erb :path_layout do
@@ -70,6 +90,7 @@ get '/paths/:id' do
 		end
 	end
 end
+# -----------------------------------
 
 get '/test' do
 	erb :application, layout: false do

@@ -2,3 +2,8 @@
 	width: 100%;
 }
 
+.geo_map{
+  width: 70%;
+  height: 300px;
+  margin: auto;
+}

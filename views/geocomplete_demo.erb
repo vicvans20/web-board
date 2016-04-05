@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="text-center col-md-12">
+      <h2>Geocomplete Demo</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-center col-md-12">
+      <div class="detailsm">
+        <input class="geo_input" type="text" placeholder="Dirección">
+        <input type="hidden" name="latitude" class="geo_lat" data-geo="lat">
+        <input type="hidden" name="longitude" class="geo_lng" data-geo="lng">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="text-center col-md-12">
+        <div class="geo_map"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".geo_input").geocomplete({
+      map: ".geo_map",
+      types: ["geocode", "establishment"],
+      details: ".detailsm",
+      detailsAttribute: "data-geo",
+      mapOptions: {
+        zoom: 17
+      },
+      markerOptions: {
+        draggable: true
+      }
+    }).bind("geocode:dragged", function(event, latLng){
+      $(".geo_lat").val(latLng.lat());
+      $(".geo_lng").val(latLng.lng());
+    });
+  })
+
+</script>

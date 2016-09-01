@@ -100,6 +100,16 @@ get '/test' do
 	end
 end
 
+post 'experimental' do
+	puts request
+	puts "---------------------"
+	puts request.body
+	puts "---------------------"
+	op = JSON.parse(request.body)
+	puts op
+	puts op[:id]
+end
+
 not_found do
 	"Page not found"
 end

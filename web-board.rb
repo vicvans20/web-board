@@ -100,7 +100,7 @@ get '/test' do
 	end
 end
 
-post 'experimental' do
+post '/experimental' do
 	puts request
 	puts "---------------------"
 	puts request.body

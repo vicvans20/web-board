@@ -105,9 +105,6 @@ post '/experimental' do
 	puts "---------------------"
 	puts request.body
 	puts "---------------------"
-	op = JSON.parse(request.body)
-	puts op
-	puts op[:id]
 end
 
 not_found do

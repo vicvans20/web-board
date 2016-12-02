@@ -91,13 +91,6 @@ class WebBoard < Sinatra::Base
 		end
 	end
 
-	post '/experimental' do
-		puts request
-		puts "---------------------"
-		puts request.body
-		puts "---------------------"
-	end
-
 	not_found do
 		"Page not found"
 	end

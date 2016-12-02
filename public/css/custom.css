@@ -1,5 +1,12 @@
+body{
+  background-color: #262B30 !important;
+}
+h1,h2,h3,h4,h5{
+  color: #fff;
+}
+
 .full-w{
-	width: 100%;
+  width: 100%;
 }
 
 .geo_map{
@@ -7,3 +14,4 @@
   height: 300px;
   margin: auto;
 }
+

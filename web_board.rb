@@ -5,12 +5,10 @@ require 'sinatra/base'
 
 class WebBoard < Sinatra::Base
 
-	@@key = false
 
 	# -----------------------------------
 	# Index
 	get '/' do
-		@@key = false
 		erb :index
 	end
 	# -----------------------------------
@@ -59,23 +57,23 @@ class WebBoard < Sinatra::Base
 			path = params[:id].to_i
 			case path
 			when 0
-				erb :path_0
+				erb :"paths/path_0"
 			when 11
-				erb :path_1
+				erb :"paths/path_1"
 			when 22
-				erb :path_2
+				erb :"paths/path_2"
 			when 53
-				erb :path_3
+				erb :"paths/path_3"
 			when 25
-				erb :path_4
+				erb :"paths/path_4"
 			when 90
-				erb :path_5
+				erb :"paths/path_5"
 			when 55
-				erb :path_6
+				erb :"paths/path_6"
 			when 190
-				erb :path_7
+				erb :"paths/path_7"
 			when 2450
-				erb :path_f
+				erb :"paths/path_f"
 			else
 				not_found
 			end

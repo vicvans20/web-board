@@ -4,6 +4,8 @@ require 'json'
 require 'sinatra/base'
 
 class WebBoard < Sinatra::Base
+	# TODO Precompiles Babel
+	# TODO Learn webpack
 
 
 	# -----------------------------------
@@ -82,6 +84,12 @@ class WebBoard < Sinatra::Base
 		end
 	end
 	# -----------------------------------
+
+	# REACT STUFF
+	get '/magical_input' do
+		erb :magical_input
+	end
+	# ----------------------
 
 	get '/test' do
 		erb :path_0 do

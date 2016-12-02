@@ -1,0 +1,32 @@
+<script type="text/babel">
+  var Input = React.createClass({
+  getInitialState: function(){
+    return{
+      userInput: ''
+    };
+  },
+  handleUserInput: function (e){
+    this.setState({
+      userInput: e.target.value
+    });
+  },
+  render: function () {
+    return (
+      <div>
+        <input className="form-control form-control-lg" onChange={this.handleUserInput} type="text" value={this.state.userInput} />
+        <h1>{this.state.userInput}</h1>
+      </div>
+    );
+  }
+});
+ReactDOM.render(
+  <Input />,
+  document.getElementById('magical_input')
+);
+</script>
+
+<div class="container">
+  <h1 class="text-xs-center">Real Time Input</h1>
+  <main id="magical_input"></main>
+</div>
+
